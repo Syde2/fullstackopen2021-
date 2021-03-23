@@ -5,9 +5,52 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+article {
+  height: 5rem;
+  width: 100%;
+}
+
+.nav{
+  height: 3rem;
+  width: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-btn{
+  height: 50px;
+  width: 60px;
+  border-radius: 15px;
+  background-color: lightgrey;
+  border: none;
+  font-size: 16px;
+}
+
+button{
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+  font-size: 16px;
+  background-color: rgb(231, 231, 231);
+  border: none;
+}
+
+button:focus {
+  outline:0 !important;
+  box-shadow: 0 0 2px 2px #3f3e3b;
+  -webkit-box-shadow: 0 0 0 2px #42413d;
+  -moz-box-shadow: 0 0 0 2px #42413d;
+}
+
+button:active{
+  font-style: italic;
 }
