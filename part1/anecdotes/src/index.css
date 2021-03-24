@@ -16,6 +16,10 @@ code {
 article {
   height: 5rem;
   width: 100%;
+  display: flex;
+  justify-content: center;
+
+
 }
 
 .nav{
@@ -27,8 +31,8 @@ article {
 }
 
 .nav-btn{
-  height: 50px;
-  width: 60px;
+  height: 3rem;
+  max-width: 4rem;
   border-radius: 15px;
   background-color: lightgrey;
   border: none;
@@ -37,8 +41,8 @@ article {
 
 button{
   cursor: pointer;
-  height: 50px;
-  width: 100px;
+  height: 3rem;
+  width: 6rem;
   font-size: 16px;
   background-color: rgb(231, 231, 231);
   border: none;

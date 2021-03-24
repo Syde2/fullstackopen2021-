@@ -11,10 +11,18 @@ const App = () => {
   ]
    
   let [selected, setSelected] = useState(0)
-  const handleVote= () => console.log('todo')
   const handleRandom= () => setSelected(selected = getRandomInt(0, anecdotes.length))
   const handleNext= () => setSelected(selected === anecdotes.length-1 ? selected = 0 :selected+1)
   const handlePrev= () => setSelected(selected === 0 ? selected = anecdotes.length-1: selected-1)
+  const [votes, setVotes] = useState(new Array(anecdotes.length).fill(0))
+  const handleVote= () => {
+    const copy= [...votes]
+    copy[selected] +=1
+    setVotes(copy)
+ 
+  }
+  let topVoted = Math.max(...votes)
+  let topVotedIndex = votes.indexOf( topVoted )
 
 
   /* Generate a random int with min and max value */
@@ -22,24 +30,25 @@ function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   let int = Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-
   return int;
 }
-
-
-
 
 
 return (
   <div>
     <h1>Anecdote of the day</h1>
     <article>
-      {anecdotes[selected]}
+      {anecdotes[selected]}      
     </article>
-    <Nav  prev = { handlePrev }  vote = {handleVote} random = { handleRandom } next = { handleNext }  />
+    <p> This quote has {votes[selected]} { (votes[selected] > 1? "votes":"vote") }  </p>
+
+    <Nav  prev = { handlePrev }  vote = {handleVote} random = { handleRandom } next = { handleNext }/>
+    <h1>Anecdote with most votes ({ topVoted }) </h1>
+    <article>
+      { anecdotes[topVotedIndex]  }
+    </article>
   </div>
 )
- 
 }
 
 const Nav = (props) => {
