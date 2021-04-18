@@ -30,24 +30,23 @@ code {
   height: 5rem;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 600px 900px;
   padding-top: 2rem;
 }
-.form{
+.add{
   height: 11rem;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 230px 900px;
   padding-bottom: 2rem;
 }
 
 .persons{
-  height: 10rem;
+  max-height: 20rem;
   width: 100vw;
   background-color: rgb(224, 220, 220);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column: span 2;
+  grid-template-columns: 580px 900px;
 }
 
 .persons ul{
@@ -66,8 +65,8 @@ form{
 
 input{
   margin: 5px;
-  max-height: 2rem;
-  max-width: 10rem;
+  height: 2rem;
+  width: 10rem;
   text-transform: capitalize;
   font-style: italic;
   border-radius: 5px;
@@ -75,9 +74,33 @@ input{
 }
 
 button{
-  margin: 0.5rem;
-  height: 1.5rem;
-  width: 3rem;
+  max-height: 1.5rem;
+  max-width: 3rem;
   cursor: pointer;
+  text-align: center;
+}
+.del-button{
+  height: 1rem;
+  width: 1rem;
+  color: red;
+  border: none;
+  border-radius: 100%;
+  text-align: start;
+  background-color: transparent;
+}
+.informative{
+  background: rgb(189, 219, 203);
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 
+.error{
+  color: red;
+  background: rgb(206, 173, 173);
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
