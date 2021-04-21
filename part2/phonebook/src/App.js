@@ -13,9 +13,8 @@ const App = () => {
   
 
   useEffect(() => {
-    console.log('Effect used')
-    axios
-      .get('http://localhost:3001/persons')
+    personservice
+      .getAll()
       .then( response =>{setPersons(response.data)})
   }, [persons.length])
 
